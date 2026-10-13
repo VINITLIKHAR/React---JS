@@ -1,40 +1,40 @@
-import React from 'react'
+import React from "react";
 import { Bookmark } from "lucide-react";
-const Card = () => {
+
+const Card = ({ brandLogo, company, datePosted, post, tag1, tag2, pay, location }) => {
   return (
-    <div className="parent">
-      <div className="card">
-        <div>
-          <div className="top">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCPjeZ-FjJ-FHOMlVO9c1ZtEPo8ypuNnRN1uCMugVyyA&s=10"
-              alt=""
-            />
-            <button>
-              Save <Bookmark size={10} />
-            </button>
+    <div className="card">
+      <div>
+        <div className="top">
+          <div className="logo-wrap">
+            <img src={brandLogo} alt={company} />
           </div>
-          <div className="center">
-            <h3>
-              Amazon <span>5 days ago</span>
-            </h3>
-            <h2>Senior UI/UX Designer</h2>
-            <div className="tag">
-              <h4>Part Time</h4>
-              <h4>Senior Level</h4>
-            </div>
-          </div>
+          <button>
+            Save <Bookmark size={11} />
+          </button>
         </div>
-        <div className="bottom">
-          <div>
-            <h3>$120/hr</h3>
-            <p>Mumbai,India</p>
+
+        <div className="center">
+          <h3>
+            {company} <span>{datePosted}</span>
+          </h3>
+          <h2>{post}</h2>
+          <div className="tag">
+            <h4>{tag1}</h4>
+            <h4>{tag2}</h4>
           </div>
-          <button>Apply Now</button>
         </div>
       </div>
-    </div>
-  )
-}
 
-export default Card
+      <div className="bottom">
+        <div>
+          <h3>{pay}</h3>
+          <p>{location}</p>
+        </div>
+        <button>Apply Now</button>
+      </div>
+    </div>
+  );
+};
+
+export default Card;

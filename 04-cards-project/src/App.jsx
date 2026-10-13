@@ -1,36 +1,7 @@
 import React from "react";
 import Card from "./components/Card";
-import User from "./components/User";
-
 
 const App = () => {
-
-
-  // const arr = [
-  //   {
-  //     user:'Vinit',
-  //     age:22
-  //   },
-  //   {
-  //     user:'pranav',
-  //     age:22
-  //   },
-  //   {
-  //     user:'Yash',
-  //     age:22
-  //   }, 
-  //   {
-  //     user:'Prem',
-  //     age:24
-  //   }
-  // ];
-
-  // arr.map(function(elem){
-  //   console.log(elem.user);
-
-  // })
-
-
   const jobs = [
     {
       brandLogo: "https://logo.clearbit.com/google.com",
@@ -40,7 +11,7 @@ const App = () => {
       tag1: "Full Time",
       tag2: "Junior Level",
       pay: "$45 - $65/hour",
-      location: "Mumbai, India"
+      location: "Mumbai, India",
     },
     {
       brandLogo: "https://logo.clearbit.com/microsoft.com",
@@ -50,7 +21,7 @@ const App = () => {
       tag1: "Full Time",
       tag2: "Mid Level",
       pay: "$50 - $75/hour",
-      location: "Bengaluru, India"
+      location: "Bengaluru, India",
     },
     {
       brandLogo: "https://logo.clearbit.com/amazon.com",
@@ -60,7 +31,7 @@ const App = () => {
       tag1: "Full Time",
       tag2: "Junior Level",
       pay: "$40 - $60/hour",
-      location: "Hyderabad, India"
+      location: "Hyderabad, India",
     },
     {
       brandLogo: "https://logo.clearbit.com/meta.com",
@@ -70,7 +41,7 @@ const App = () => {
       tag1: "Part Time",
       tag2: "Mid Level",
       pay: "$45 - $70/hour",
-      location: "Mumbai, India"
+      location: "Mumbai, India",
     },
     {
       brandLogo: "https://logo.clearbit.com/apple.com",
@@ -80,7 +51,7 @@ const App = () => {
       tag1: "Full Time",
       tag2: "Senior Level",
       pay: "$60 - $90/hour",
-      location: "Bengaluru, India"
+      location: "Bengaluru, India",
     },
     {
       brandLogo: "https://logo.clearbit.com/netflix.com",
@@ -90,7 +61,7 @@ const App = () => {
       tag1: "Full Time",
       tag2: "Senior Level",
       pay: "$65 - $95/hour",
-      location: "Remote, India"
+      location: "Remote, India",
     },
     {
       brandLogo: "https://logo.clearbit.com/nvidia.com",
@@ -100,7 +71,7 @@ const App = () => {
       tag1: "Full Time",
       tag2: "Senior Level",
       pay: "$70 - $100/hour",
-      location: "Pune, India"
+      location: "Pune, India",
     },
     {
       brandLogo: "https://logo.clearbit.com/adobe.com",
@@ -110,7 +81,7 @@ const App = () => {
       tag1: "Full Time",
       tag2: "Mid Level",
       pay: "$50 - $75/hour",
-      location: "Noida, India"
+      location: "Noida, India",
     },
     {
       brandLogo: "https://logo.clearbit.com/ibm.com",
@@ -120,7 +91,7 @@ const App = () => {
       tag1: "Full Time",
       tag2: "Mid Level",
       pay: "$45 - $70/hour",
-      location: "Ahmedabad, India"
+      location: "Ahmedabad, India",
     },
     {
       brandLogo: "https://logo.clearbit.com/salesforce.com",
@@ -130,19 +101,15 @@ const App = () => {
       tag1: "Part Time",
       tag2: "Junior Level",
       pay: "$40 - $60/hour",
-      location: "Chennai, India"
-    }
+      location: "Chennai, India",
+    },
   ];
-
-  console.log(jobs);
-  
 
   return (
     <div className="parent">
-      {jobs.map(function(){
-
-        return <h1>Hey</h1>
-      })}
+      {jobs.map((elem, idx) => (
+        <Card key={idx} {...elem} />
+      ))}
     </div>
   );
 };
