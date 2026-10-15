@@ -1,10 +1,11 @@
 import React from 'react'
-// import '../styles/Header.css'
+import styles from './Header.module.css'
+
 const Header = () => {
     return (
-        <div className='header'>
-            <h3>vinixx</h3>
-            <button>Login</button>
+        <div className={styles.header}>
+            <h3 className={styles.logo}>vinixx</h3>
+            <button className={styles.btn}>Login</button>
         </div>
     )
 }
