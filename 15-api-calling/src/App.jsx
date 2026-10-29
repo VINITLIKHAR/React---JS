@@ -1,13 +1,15 @@
 import axios from 'axios'
+import { useState } from 'react'
 
 const App = () => {
+  const [data, setData] = useState([])
 
 
   // async function getData(){
   //   const response = await fetch('https://jsonplaceholder.typicode.com/posts/1')
 
   //   console.log(response);
-    
+
   // }
 
 
@@ -21,12 +23,11 @@ const App = () => {
 
   const getData = async () => {
     const response = await axios.get('https://jsonplaceholder.typicode.com/users')
+    setData(response.data)
 
-    console.log(response.data);
-    
   }
-      
-    
+
+
   // }
 
   // function getData() {
@@ -40,6 +41,11 @@ const App = () => {
   return (
     <div>
       <button onClick={getData}>Get Data</button>
+      <div>
+        {data.map(user => (
+          <h3 key={user.id}>{user.name}</h3>
+        ))}
+      </div>
     </div>
   )
 }
