@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Practice2 = () => {
 
@@ -13,6 +14,13 @@ const Practice2 = () => {
         console.log('Password : ',password);
         
         
+    }
+
+    const navigate = useNavigate(); 
+
+    const backtoHome = () => {
+
+        navigate("/");
     }
 
   return (
@@ -36,6 +44,11 @@ const Practice2 = () => {
 
         <button type='submit' className='btn-outline'>
             Submit
+        </button>
+
+
+        <button onClick={backtoHome}>
+            BACK TO HOME
         </button>
     </form>
   )
